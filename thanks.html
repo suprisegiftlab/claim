@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auto Close Tab</title>
+  <script>
+    function autoCloseTab() {
+      // Attempt to close directly
+      window.close();
+
+      // Fallback trick — redirect to blank page then close again
+      const newWin = window.open('about:blank', '_self');
+      newWin?.close();
+
+      // Just in case, also redirect after that
+      setTimeout(() => {
+        window.location.href = 'about:blank';
+      }, 500);
+    }
+
+    window.onload = () => {
+      setTimeout(autoCloseTab, 1000); // 10 seconds
+    };
+  </script>
+</head>
+<body>
+  <h2>Logging you in... ⏳</h2>
+</body>
+</html>
